@@ -40,13 +40,19 @@ console.log("Idade em Horas!" , idadeUsuário * 8760)*/
 
 // Exercício 4
 
-const primeiroNumero =Number(prompt("Digite um nímero" ))
+/*const primeiroNumero =Number(prompt("Digite um nímero" ))
 const segundoNumero = Number(prompt("Digite outro número"))
 
 console.log("O primeiro número é maior que o segundo?" , primeiroNumero > segundoNumero)
 console.log("O primeiro número é igual o segundo?" ,primeiroNumero == segundoNumero)
 console.log("O primeiro número é divisível pelo segundo?")
-console.log("O segundo numero é divisível primeiro")
+console.log("O segundo numero é divisível primeiro")*/
+
+
+ 
+
+
+
 
 
 
