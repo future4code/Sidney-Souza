@@ -24,7 +24,7 @@ function retornaNumerosPares (array) {
    const novoArray =[]
    for(let i =0; i< array.length; i++){
       if(array[i] % 2 === 0 ){
-       return novoArray.push(array[i]) 
+       novoArray.push(array[i]) 
       }
    }
 return novoArray
@@ -33,13 +33,20 @@ return novoArray
 //Exercício 4
 
 function retornaMaiorNumero(array) {
-   // implemente sua lógica aqui
+   let maiorNumero = 0
+   for(let i =0; i<array.length; i++){
+      if(array[i]> maiorNumero){
+         maiorNumero = array[i]
+      }
+   }
+   return maiorNumero
 }
 
 //Exercício 5
 
 function retornaQuantidadeElementos (array) {
-   // implemente sua lógica aqui
+   novoArray= array.length
+   return novoArray
 }
 
 //Exercício 6
@@ -51,8 +58,16 @@ function retornaExpressoesBooleanas() {
 //Exercício 7
 
 function retornaNNumerosPares(n) {
-   // implemente sua lógica aqui
+   const novoArray = [] ;
+   for( let
+       numero = 0 ; novoArray.length < n ; numero++){
+      if(numero % 2 === 0){
+         novoArray.push(numero)
+      } 
+   }
+   return novoArray
 }
+
 
 // Exercício 8
 
@@ -69,7 +84,30 @@ function checaTriangulo(a, b, c) {
 // Exercício 9
 
 function comparaDoisNumeros(num1, num2) {
-   // implemente sua lógica aqui
+   
+      let maiorNumero;
+      let menorNumero;
+      let maiorDivisivelporMenor;
+     
+      if(num1 > num2) {
+         maiorNumero = num1;
+         menorNumero = num2;
+      } else {
+         maiorNumero = num2;
+         menorNumero = num1;
+       }
+     
+       maiorDivisivelporMenor = maiorNumero % menorNumero === 0;
+     
+       const diferenca = maiorNumero - menorNumero;
+     
+       return {
+         maiorNumero: maiorNumero,
+         maiorDivisivelporMenor: maiorDivisivelporMenor,
+         diferenca: diferenca
+       }
+     
+     
 }
 
 // Exercício 10
