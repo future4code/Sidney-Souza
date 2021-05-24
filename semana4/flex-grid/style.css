@@ -1,0 +1,68 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    display: flex;
+    flex-direction: column;
+}
+header{
+    height: 70px;
+    background-color: mediumvioletred;
+    padding: 7px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.img{
+    background-image: url(https://icons-for-free.com/iconfiles/png/512/cake-1321215613168069161.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    width: 1%;
+
+}
+main{
+    flex-grow: 1;
+    background-color: white;
+    display: flex;
+    
+}
+footer{
+    height: 50px;
+    background-color: mediumvioletred;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+nav{
+    
+    border-right: 1px;
+    width: 50%;
+    display: flex;
+    justify-content: space-evenly;
+    width: 30%;
+    background-color:#f2d0e0 ;
+
+    
+}
+nav ul{
+    list-style: none;
+    
+}
+
+    
+
+main{
+    width: 100%;
+   
+}
+nav img{
+    width: 10%;
+}
+div{
+  width: 70%;  
+}
+div img{
+    width: 30%;
+}
