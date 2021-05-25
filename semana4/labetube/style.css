@@ -1,0 +1,45 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-shadow: border-box;
+}
+.texto-logo{
+    display: flex;
+    align-items: center;
+    width: 30px;
+    margin:0 6px 6px 0 ;
+}
+header{
+    background-color: chocolate;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:8px ;
+    height: 70px;
+}
+main{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    row-gap: 20px;
+    align-items: center;
+    justify-content: space-between;
+    margin: 5px;
+}
+footer{
+    background-color: darkslategray;
+    padding: 8px;
+    display: flex;
+    height: 70px;
+}
+.card-video{
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 8px;
+    box-shadow: 2px 2px 5px green;
+}
+img{
+    height: 300px;
+    width: 300px;
+}
