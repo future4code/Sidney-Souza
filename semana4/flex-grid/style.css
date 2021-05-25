@@ -14,20 +14,58 @@ header{
     justify-content: space-between;
     align-items: center;
 }
-.img{
-    background-image: url(https://icons-for-free.com/iconfiles/png/512/cake-1321215613168069161.png);
-    background-repeat: no-repeat;
-    background-size: cover;
+.logo{
     display: flex;
-    width: 1%;
-
+    width: 50%;
+    margin: 10px;
+   
+}
+.logo img{
+    width: 4%;
+    margin: 10px 20px;
+}
+.logo h3{
+    width: 20%;
+    padding-top: 15px;
+}
+button{
+    margin: 10px;
+    padding: 3px;
+     
 }
 main{
-    flex-grow: 1;
-    background-color: white;
-    display: flex;
     
+    background-color: white;
+    display: flex; 
+    width: 100%;   
 }
+.menu{
+    width: 100%;
+    height: 15%;
+    
+   /* display: grid;
+    grid-template-columns:1fr ;
+    grid-template-rows:1fr 1fr 1fr 1fr;*/
+}
+.item-menu{
+    width: 100%;
+    display: flex;
+}
+.img1{
+    width: 8%;
+    margin: 10px;
+}
+.img2{
+    width: 8%;
+    margin: 10px 10px 10px 10px;
+}
+.link{
+
+    margin: 20px 100px 10px 10px ;
+    text-decoration: none;
+
+}
+
 footer{
     height: 50px;
     background-color: mediumvioletred;
@@ -36,33 +74,41 @@ footer{
     align-items: center;
 }
 nav{
-    
     border-right: 1px;
-    width: 50%;
+    width: 20%;
     display: flex;
     justify-content: space-evenly;
-    width: 30%;
-    background-color:#f2d0e0 ;
-
-    
-}
-nav ul{
-    list-style: none;
-    
+    background-color:#f2d0e0 ;    
 }
 
-    
+.geral{
+  width: 80%;
+  
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  row-gap: 5px;
+  column-gap: 5px;
+  
 
-main{
+}
+.conteudo{
+    width: 90%;
+   margin: 30px;
+   border-style:  outset ;
+   box-shadow: darkgray;
+ 
+    
+}
+.conteudo img{
     width: 100%;
-   
 }
-nav img{
-    width: 10%;
+.conteudo p{
+    width: 100%;
+    text-align: center;
 }
-div{
-  width: 70%;  
+.conteudo h2{
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
-div img{
-    width: 30%;
-}
+
