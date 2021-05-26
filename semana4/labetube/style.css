@@ -24,6 +24,8 @@ header{
     align-items: center;
     justify-content: space-between;
     margin: 5px;
+    
+   
 }
 footer{
     background-color: darkslategray;
@@ -55,4 +57,16 @@ img{
 }
 .midia{
     width: 50%;
+}
+@media screen and (min-device-width: 320px) and (max-device-width :480px){
+    .container {
+        grid-template-columns: 1fr;
+        
+     }
+}
+
+@media screen and (min-device-width:481px) and (max-device-width:800px){
+    .container {
+        grid-template-columns: 1fr;
+     }
 }
