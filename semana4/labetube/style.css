@@ -17,7 +17,7 @@ header{
     padding:8px ;
     height: 70px;
 }
-main{
+.container{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     row-gap: 20px;
@@ -27,9 +27,10 @@ main{
 }
 footer{
     background-color: darkslategray;
-    padding: 8px;
-    display: flex;
+    padding-top: 30px;
     height: 70px;
+    text-align: center;
+    
 }
 .card-video{
     width: 300px;
@@ -42,4 +43,16 @@ footer{
 img{
     height: 300px;
     width: 300px;
+}
+.video{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+   
+    margin: 120px auto 120px auto;
+}
+.midia{
+    width: 50%;
 }
