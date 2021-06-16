@@ -1,44 +1,44 @@
 import React from 'react';
-import axios from 'axios';
+import TelaCadastro from './components/TelaCadastro';
+import TelaListaUsuarios from "./components/TelaListaUsuarios"
+//import axios from 'axios';
 
 
-const url = "https://us-central1-labenu-apis.cloudfunctions.net/labenusers/users";
-const headers = {
-  headers: {
-    Authorization:"sidney-souza-molina"
-  }
-};
+
 
 export default class app extends React.Component {
 
   state = {
-    listUsers: []
+    telaAtual:"cadastro"
   }
 
-  componentDidMount() {
-    this.pegaListaDeUsuario();
+  escolheTela = () => {
+    switch(this.state.telaAtual){
+        case "cadastro":
+            return <TelaCadastro irParaLista={this.irParaLista}/>
+        case "lista":
+            return <TelaListaUsuarios irParaCadastro={this.irParaCadastro}/>
+        default:
+            return <div>Error! página não encontrada:</div>       
+    
+    }  
   }
 
-  pegaListaDeUsuario = () => {
-    axios.get(url, headers)
-    .then((res) =>{
-      //console.log(res)
-      this.setState({listUsers:res.data})
-      
-    })
-    .catch((err) => {
-      alert(err.response)
-    })
-  };
+
+ irParaCadastro = () => {
+    this.setState({telaAtual:"cadastro"})
+ }
+
+ irParaLista = () =>{
+  this.setState({telaAtual:"lista"})
+ } 
+
   render() {
-    console.log(this.state.listUsers)
-    const componentesListUser = this.state.listUsers.map((list) =>{
-      return <li>{list.name}</li>
-    })
+    
     return(
       <div>
-        <h1>Lista de Usuarios</h1>
-        {componentesListUser}
+        <h1></h1>
+        {this.escolheTela()} 
       </div>
     )
   }
