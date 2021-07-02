@@ -1,6 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-
+import Matches from './componentes/Matches';
+import Detalhes from './componentes/Detalhes';
+import Inicio from './componentes/Inicio';
+import logo from './img/Logo';
+import Badge from '@material-ui/core/Badge';
+import {DivApp, DivInterna, Header, DivEspaco, Logo, IconeCurtidas, IconeVoltar} from './AppStyled';
 
 
 const App = () => {
@@ -64,12 +69,65 @@ const App = () => {
 
   let secaoCarregada = undefined;
 
+
+
+
+
+  switch(secao){
+    case "matches":
+      secaoCarregada = (
+        <DivInterna>
+            <Header>
+              <IconeVoltar onClick={mudaSecao} value="inicio" />
+              <Logo src={logo} />
+              <DivEspaco />
+            </Header>
+            <Matches recebeInfo={recebeInfo} lista={listaDeMatches} />
+          </DivInterna>
+      )
+      break;
+    case "detalhes":
+        secaoCarregada = (
+          <DivInterna>
+            <Header>
+              <IconeVoltar onClick={mudaSecao} value="matches" />
+              <Logo src={logo} />
+              <DivEspaco />
+            </Header>
+            <Detalhes perfil={perfilSelecionado} />
+          </DivInterna>
+        )
+      break;
+    default:
+      secaoCarregada = (
+        <DivInterna>
+            <Header>
+              <DivEspaco />
+              <Logo src={logo} />
+              {listaDeMatches 
+                ? <Badge badgeContent={listaDeMatches.length} color="secondary">
+                      <IconeCurtidas onClick={mudaSecao} value="matches" />
+                  </Badge>
+                : <IconeCurtidas onClick={mudaSecao} value="matches" />
+              }
+            </Header>
+            <Inicio perfil={perfilCarregado} recarrega={recarrega} />
+          </DivInterna>
+        )
+    break;
+  }
+
   return (
     <DivApp>
       <button onClick={limparSwipes}>Limpar swipes e matches</button>
       {secaoCarregada}
     </DivApp>
   );
+
+
+
+
+ 
 }
 
 export default App;
