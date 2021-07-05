@@ -2,7 +2,7 @@ import React from "react";
 import axios from "axios";
 import styled from "styled-components"
 
-const CardList = styled.div`
+const CardList = styled.button`
   border: 1px solid black;
   padding: 10px;
   margin: 10px;
@@ -79,10 +79,10 @@ export default class App extends React.Component {
   }
 
   render() {
-    const componentesPlaylist = this.state.playlists.map((play) => {
-      return <CardList key={play.id}>
-        {play.name}
-        <button onClick={() => this.deletePlaylist(play.id)}>X</button>
+    const componentesPlaylist = this.state.playlists.map((playList) => {
+      return <CardList key={playList.id}>
+        {playList.name}
+        <button onClick={() => this.deletePlaylist(playList.id)}>X</button>
       </CardList>;
     });
 
