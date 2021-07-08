@@ -1,9 +1,10 @@
 import React from "react";
 
-export const CreateTripPage= () => {
+ const CreateTripPage = () => {
     return(
         <div>
            <p>Formulário para o administrador criar uma nova viagem</p> 
         </div>
     )
 }
+export default CreateTripPage
