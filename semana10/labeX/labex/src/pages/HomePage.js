@@ -1,24 +1,29 @@
 import React from "react";
-import { useHistory } from "react-router-dom";
+import { useHistory,} from "react-router-dom";
 import { goToListTripsPage, goToLoginPage } from "../routes/coordinator";
-import { Astronalta} from "../img"
+import { Container } from "./HomePageStyled";
+import { ButtonsContainer } from "./HomePageStyled";
+
+
+
+
 
  const HomePage = () => {
-
+  
     const history = useHistory()
     return(
-        <div>
-          <img classname = "home" src= "Astronalta"alt=""/>
-           <h1>LabeX</h1>
-
+        <Container>
+           <h1 className='titulo'>LabeX</h1>
+            <ButtonsContainer>
            <button onClick={() => goToListTripsPage(history)}>
              Viagens
            </button>
-
+            
             <button onClick={() => goToLoginPage(history)}>
-               Área de Admin
+             Painel ADM
             </button>
-        </div>
+            </ButtonsContainer>
+        </Container>
     );
 };
 export default HomePage

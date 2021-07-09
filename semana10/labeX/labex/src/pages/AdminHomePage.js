@@ -1,9 +1,9 @@
-import React from 'react'
-import useProtectedPage from "../componentes/useUnprotectedPage"
-import { useHistory } from 'react-router-dom'
+import React from "react";
+import useProtectedPage from "../componentes/useUnprotectedPage";
+import { useHistory } from "react-router-dom";
 import { goToCreateTripPage, goToHomePage } from "../routes/coordinator";
-import { logout } from "../services/requests"
-import useRequestData from "../componentes/useRequestdata"
+import { logout } from "../services/requests";
+import useRequestData from "../componentes/useRequestdata";
 import AdminTripCard from "../componentes/AdminTripcard";
 
 

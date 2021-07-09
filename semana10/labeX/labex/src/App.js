@@ -3,16 +3,14 @@ import Router  from "./routes/Router";
 
 
 
-export default function App(){
 
-  
-
-
-  return(
-   <div>
-     <Router/>
-
-  </div>
-  
+function App() {
+  return (
+    <div>
+        <Router/>
+    </div>
+       
   );
-};
+}
+
+export default App;

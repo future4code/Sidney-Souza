@@ -1,6 +1,6 @@
-import { useState, useEffect } from "react"
-import { BASE_URL } from "../componentes/url"
-import axios from "axios"
+import { useState, useEffect } from "react";
+import { BASE_URL } from "../componentes/url";
+import axios from "axios";
 
 const useRequestData = (endpoint, initialState) => {
     const [data, setData] = useState(initialState)

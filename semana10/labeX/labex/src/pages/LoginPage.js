@@ -36,8 +36,7 @@ const LoginPage = () => {
                     value={form.password}
                     onChange={onChange}
                     required
-                   // pattern={"^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[$*&@#])(?:([0-9a-zA-Z$*&@#])(?!\1)){8,}$"}
-                    title={"Sua senha de conter no mínimo 8 caracteres,pelomenos uma letra maiuscula e um caractere especial"}
+                   
                 />
                 <div>
                     <button onClick={() => goToHomePage(history)}>Voltar</button>
