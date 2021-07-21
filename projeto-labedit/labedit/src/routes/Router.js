@@ -5,32 +5,36 @@ import FeedPostsPage from "../pages/FeedPostsPage/FeedPostsPage";
 import PostPage from "../pages/PostPage/PostPage";
 import SignUpPage from "../pages/SignUpPage/SignUpPage";
 import ErrorPage from "../pages/ErrorPage/ErrorPage";
+import Header from "../components/Header/Header";
+
 
 const Router =() => {
     return(
         <BrowserRouter>
-            <Switch>
-                <Route exact path= "/login">
-                    <LoginPage/>
-                </Route>
+            <Header>
+                <Switch>
+                     <Route exact path= "/login">
+                        <LoginPage/>
+                     </Route>
 
-                <Route exact path= "/cadastro">
-                    <SignUpPage/>
-                </Route>
+                     <Route exact path= "/cadastro">
+                        <SignUpPage/>
+                     </Route>
 
-                <Route exact path= "/">
-                    <FeedPostsPage/>
-                </Route>
+                     <Route exact path= "/">
+                        <FeedPostsPage/>
+                     </Route>
 
-                <Route exact path= "/post/:id">
-                    <PostPage/>
-                </Route>
+                     <Route exact path= "/post/:id">
+                        <PostPage/>
+                     </Route>
 
-                <Route>
-                    <ErrorPage />
-                </Route>
+                     <Route>
+                       <ErrorPage />
+                     </Route>
 
-            </Switch>
+                </Switch>
+            </Header>
         </BrowserRouter>
     )
 }
