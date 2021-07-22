@@ -6,10 +6,10 @@ import Router from './routes/Router';
 
 const App =() =>{
   return (
-    <ThemeProvider teme ={theme}>
+    <ThemeProvider theme ={theme}>
      <Router/>
     </ThemeProvider>
   );
 };
 
-export default App;
+export default App

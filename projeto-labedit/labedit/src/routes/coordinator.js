@@ -11,6 +11,6 @@ export const gotoFeedPostsPage = (history) => {
 }
 
 export const gotoPostPage = (history) => {
-     history.push("/post")
+     history.push(`/post/`)
 }
 

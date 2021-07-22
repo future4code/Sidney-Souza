@@ -1,7 +1,7 @@
-import{usestate} from "react";
+import{useState} from "react";
 
 const useForm = (initialState) => {
-    const [form, setForm] =useState(initialState)
+    const [form, setForm] = useState(initialState)
 
     const handleInptChange = (e) => {
         const {value, name} = e.target
