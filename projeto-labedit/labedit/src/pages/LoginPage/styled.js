@@ -5,7 +5,7 @@ export const LoginContainer = styled.div`
     flex-direction:column;
     align-items:center;
     width: 100vw;
-    margin-top: 10vh;
+    margin-top: 1vh;
 `
 
 export const InputsContainer = styled.div`
@@ -17,7 +17,7 @@ export const InputsContainer = styled.div`
     margin-bottom:20px;
 `
 
-export const loginFormContainer = styled.div`
+export const LoginFormContainer = styled.div`
     display: flex;
     flex-direction:column;
     width: 80vw;
@@ -26,13 +26,14 @@ export const loginFormContainer = styled.div`
     margin-bottom:20px;
 `
 
-export const SignUpButtonContainer = styled.div`
+export const LoginButtonContainer = styled.div`
     width: 80vw;
     max-width:450px;
     
 `
 
-export const LogoImage = styled.div`
-    
+export const LogoImage = styled.img`
+    width:70vw;
+    max-width:250px;
     
 `

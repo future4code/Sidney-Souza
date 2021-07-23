@@ -1,16 +1,16 @@
-export const gotoLogin = (history) => {
+export const goToLogin = (history) => {
     history.push("/login")
 }
 
-export const gotoSignUpPage = (history) => {
-     history.push("/cadastro")
+export const goToSignUp = (history) => {
+    history.push("/cadastro")
 }
 
-export const gotoFeedPostsPage = (history) => {
+export const goToFeedPostsPage = (history) => {
     history.push("/")
 }
 
-export const gotoPostPage = (history) => {
-     history.push(`/post/`)
+export const goToPostPage = (history, id) => {
+     history.push(`/post/${id}`)
 }
 

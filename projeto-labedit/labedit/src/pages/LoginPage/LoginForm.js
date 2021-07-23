@@ -3,14 +3,19 @@ import{  InputsContainer} from "./styled";
 import TextField  from "@material-ui/core/TextField";
 import Button from "@material-ui/core/Button"
 import useForm from "../../hooks/useForm";
+import { login } from "../../services/user";
+import { useHistory } from "react-router-dom";
 
 
 const LoginForm = () => {
     const [form, onChange, clear] = useForm({email: "", password:""})
+    const history = useHistory()
 
     const onSubmitForm =(event) =>{
         event.preventDefault()
+        login(form, clear, history)
     }
+    
     return(
      <InputsContainer>
             <form onSubmit={onSubmitForm}>
@@ -21,31 +26,31 @@ const LoginForm = () => {
                     label={"E-mail"}
                     variant={"outlined"}
                     fullWidth
-                    margin={"dense"}
+                    margin={"normal"}
                     required
                     type={"email"}
                 />
                 <TextField
-                    name={"passwrd"}
+                    name={"password"}
                     value={form.password}
-                    onChange={onChange}  
-                    label={"Senha"} 
-                    variant={"outlined"} 
-                    fullWidth 
-                    margin={"dense"} 
+                    onChange={onChange}   
+                    label={"Senha"}
+                    variant={"outlined"}
+                    fullWidth
+                    margin={"normal"}
                     required
-                    type={"senha"}
+                    type={"passwordl"} 
                 />
 
-                 <Button 
+                <Button 
                     type={"submit"}
                     fullWidth
                     variant={"contained"} 
                     color={"primary"}
-                    margin={"dense"} 
-                 >
+                    margin={"normal"} 
+                >
                      Fazer Login!
-            </Button>
+                </Button>
          </form>
      </InputsContainer>
     )

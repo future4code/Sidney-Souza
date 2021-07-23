@@ -14,20 +14,24 @@ const Router =() => {
             <Header/>
                 <Switch>
 
-                     <Route exact path = "/login">
-                        <LoginPage/>
+                     <Route
+                      exact path="/login">
+                      <LoginPage/>
                      </Route>
 
-                     <Route exact path= "/cadastro">
-                        <SignUpPage/>
+                     <Route 
+                       exact path="/cadastro">
+                       <SignUpPage/>
                      </Route>
 
-                     <Route exact path= "/">
-                        <FeedPostsPage/>
+                     <Route 
+                       exact path="/">
+                       <FeedPostsPage/>
                      </Route>
 
-                     <Route exact path= "/post/:id">
-                        <PostPage/>
+                     <Route 
+                       exact path="/post/:id">
+                       <PostPage/>
                      </Route>
 
                      <Route>
