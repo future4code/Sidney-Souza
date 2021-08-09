@@ -1,0 +1,12 @@
+{
+  "name": "template-node-npm",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "aula41":"clear && node ./src/ExerciciosAula41.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
