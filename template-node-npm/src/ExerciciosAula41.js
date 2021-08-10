@@ -1,4 +1,4 @@
-//1 A- process.argv []
+/*//1 A- process.argv []
 //1 B
 const nome = "Sidney"
 const idade = 35
@@ -41,4 +41,12 @@ const listaDETarefas = process.argv [2]
 const novaTarefa = process.argv [3]
 
 console.log(`Tarefa adicionada com sucesso! ${novaTarefa}`)
-console.log(`${listaDETarefas}`)
+console.log(`${listaDETarefas}`)*/
+
+
+
+const firstNumber = Number(prompt("digite um numero"))
+const secondNumber = Number( prompt("digite outro numero numero"))
+const sum = firstNumber + secondNumber 
+
+alert(`a somo dos números é :${sum}`)
