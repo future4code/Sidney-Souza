@@ -68,8 +68,23 @@ app.get("/", (req: Request, res: Response) => {
 // USER
 app.get("/user", (req: Request, res: Response) => {
   res.send(users)
+})
 
-  //res.status(200).send("pong!")
+app.get("/type", (req: Request, res: Response) => {
+  let codeError:number = 400
+  try {
+    const type:string = req.query.type as string
+    const user: User | undefined = users.find((user) => user.type === type)
+    if(!user) {
+      codeError = 400
+      throw new Error("user not found")
+    }
+    res.status(200).send(user)
+    
+    }catch(error) {
+      res.status(codeError).send({message: error.message})
+    }
+  
 })
 
 app.listen(3003, () => {
