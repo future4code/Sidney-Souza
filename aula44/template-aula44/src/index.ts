@@ -1,6 +1,7 @@
 import express, { Request, Response } from 'express'
 import cors from 'cors'
 
+
 type User = {
   id: number,
   name: string,
@@ -70,6 +71,9 @@ app.get("/user", (req: Request, res: Response) => {
   res.send(users)
 })
 
+enum UserType{
+  ADMIN = "ADMIN",
+  NORMAL = "NORMAL"//
 app.get("/type", (req: Request, res: Response) => {
   let codeError:number = 400
   try {
