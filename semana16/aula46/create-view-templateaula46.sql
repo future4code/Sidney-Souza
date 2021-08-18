@@ -38,8 +38,62 @@ ALTER TABLE Actor CHANGE gende gender VARCHAR(100);
 
 --4-d
 --SELECT SUM(salary) FROM Actor
---conte todas 
+
 --## Exercício 5-A
+
+
+--5-b
+--SELECT id, name FROM Actor ORDER BY name DESC;
+
+--5-c
+--SELECT * FROM Actor ORDER BY salary;
+
+--5-d SELECT * FROM Actor ORDER BY salary DESC LIMIT 3;
+
+--5-e
+--SELECT AVG(salary), gender FROM Actor GROUP BY gender;
+
 --## Exercício 6-A
+--ALTER TABLE Movie ADD playing_limit_date DATE;
+
+--6-b
+--ALTER TABLE Movie CHANGE rating rating FLOAT;
+
+
+--6-c
+--UPDATE Movie SET playing_limit_date = "2020-12-31" WHERE id = "001"
+
+
+--6-d
+--DELETE FROM Movie WHERE id = "001"
+
 --## Exercício 7-A
+--SELECT COUNT(*) FROM Movie WHERE rating > 7.5;
+
+--7-b
+--SELECT AVG(rating) FROM Movie;
+
+--7-c
+--SELECT COUNT(*) FROM Movie WHERE playing_limit_date > CURDATE();
+
+--7-d
+--SELECT COUNT(*) FROM Movie WHERE release_date > CURDATE();
+
+--7-e
+--SELECT MAX(rating) FROM Movie;
+
+--7-f
+--SELECT MIN(rating) FROM Movie;
+
+
 --## Exercício 8-A
+--SELECT * FROM Movie ORDER BY title;
+
+--8-b
+--SELECT * FROM Movie ORDER BY title LIMIT 5;
+
+--8-c
+--SELECT * FROM Movie WHERE release_date < CURDATE() ORDER BY release_date DESC LIMIT 3;
+
+--8-d
+--SELECT * FROM Movie ORDER BY rating DESC LIMIT 3;
