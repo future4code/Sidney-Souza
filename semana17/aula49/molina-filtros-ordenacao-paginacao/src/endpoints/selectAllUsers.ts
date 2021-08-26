@@ -6,5 +6,5 @@ export default async function selectAllUsers():Promise<any> {
        FROM aula48_exercicio;
     `)
  
-    return result[0]
+    return result[0][0]
  }

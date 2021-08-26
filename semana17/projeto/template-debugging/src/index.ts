@@ -1,21 +1,20 @@
 import express from "express"
 import cors from "cors"
 import { AddressInfo } from "net"
-import { getAllRecipes } from "./endpoints/getAllRecipes"
-import getUserByName from "./endpoints/getUserByName"
-import getUserByEmail from "./endpoints/getUserByEmail"
-import getUserByType from "./endpoints/getUserByType"
-
+import { getFeed } from "./endpoints/getFeed"
+import { signup } from "./endpoints/signup"
+import { login } from "./endpoints/login"
 
 export const app = express()
 
 app.use(express.json())
 app.use(cors())
 
-app.get("/recipes", getAllRecipes)
-app.get("/users", getUserByName)
-app.get("/users/email", getUserByEmail)
-app.get("/users/type", getUserByType)
+app.post("/signup", signup)
+app.post("/login", login)
+
+app.get("/recipes", getFeed)
+
 const server = app.listen(process.env.PORT || 3003, () => {
    if (server) {
       const address = server.address() as AddressInfo;
