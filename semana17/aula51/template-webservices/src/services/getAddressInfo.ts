@@ -1,6 +1,7 @@
 import axios from "axios";
 import { addressInfo } from "../types";
 
+
 export const getAddressInfo = async (
     zipCode:string
 ):Promise<addressInfo | null>=>{
