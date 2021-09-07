@@ -1,26 +1,32 @@
 import {Request, Response} from "express";
-import insertUser from "../data/insertUser";
+import { UserDatabase,} from "../class/classUsers";
+import InsertUser from "../data/insertUser";
+
 
 
 export default async function createUser(
     req: Request,
     res: Response
-){
+):Promise<void>{
     try{
         const { name, email, age} = req.body
-        if(
-            !name || !email|| !age 
-            ){
+        {
                 res.status(400)
                 .send("Preencha todos os campos corretamente!")
         }
         const id:string = Date.now()  +Math.random().toString()
+
+       
+       
         
-        
-        await insertUser(
+         const Userdb = new UserDatabase(id, name, email, age)
+         Userdb.insertUser(UserDatabase)
+
+
+        /*await insertUser(
             id, name,  email,  age 
         )
-
+*/
         {
             res.status(200)
             .send("Usuário criado com sucesso!")
@@ -34,4 +40,8 @@ export default async function createUser(
 }
 
 
+
+function User(User: any) {
+    throw new Error("Function not implemented.");
+}
 

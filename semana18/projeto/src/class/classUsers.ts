@@ -1,19 +1,19 @@
-export  class Users {
-    //id: string;
-    name: string;
+import { Cadastro } from "./classCadastro";
+
+export  class UserDatabase extends Cadastro {
     email: string;
     age: number;
+    
 
 
-    constructor(
-        //id: string,
-        userName: string,
-        userEmail: string,
-        userage: number
+    constructor(id:string, name:string, email: string, age: number
         ) {
-          // this.id= id,
-           this.name= userName,
-           this.email= userEmail,
-           this.age= userage
+          super(id, name)
+           this.email= email,
+           this.age= age
+           
+           
     }
+     
+    
 }

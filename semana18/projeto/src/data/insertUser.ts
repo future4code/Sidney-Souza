@@ -1,6 +1,4 @@
-import {connection} from "../data/connection";
-
-
+import {connection} from "./connection";
 
 export default async function insertUser(
    id:string,
