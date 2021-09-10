@@ -17,6 +17,7 @@ export default async function createUser(
          res.statusCode = 422
          throw new Error("Preencha os campos 'name', 'email', 'senha' e 'role'")
       }
+      
 
       if (senha.length < 6) {
          res.statusCode = 422

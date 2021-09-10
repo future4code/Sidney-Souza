@@ -1,6 +1,7 @@
 export enum USER_ROLES {
-   NORMAL = "NORMAL",
-   ADMIN = "ADMIN"
+    NORMAL = "NORMAL",
+    ADMIN = "ADMIN",
+    generate = "generate"
 }
 
 export type user = {
