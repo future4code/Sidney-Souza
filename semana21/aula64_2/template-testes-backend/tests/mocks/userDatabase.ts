@@ -11,7 +11,7 @@ export class UserDatabaseMock {
   })
 
   public async getUserById(id: string): Promise<User | undefined> {
-    return undefined;
+    return new User(id, "Nome", "email", "123123", USER_ROLES.ADMIN);
   }
 
   public async getAllUsers(): Promise<User[]> {

@@ -1,9 +1,9 @@
 import BaseDataBase from "./BaseDatabase";
-import { User } from "../model/User";
+import { User } from "../model/user";
 
 export class UserDatabase extends BaseDataBase {
 
-   protected tableName: string = "user";
+   protected tableName: string = "users";
 
    private toModel(dbModel?: any): User | undefined {
       return (
@@ -70,5 +70,3 @@ export class UserDatabase extends BaseDataBase {
       }
    }
 }
-
-export default new UserDatabase()

@@ -81,6 +81,32 @@ export class UserBusiness {
          throw new CustomError(error.statusCode, error.message)
       }
    }
+
+   public async getUserById (id: string) {
+
+      try {
+         if (!id  ) {
+            throw new CustomError(404, "User not found");
+         }
+
+         const user = await userDatabase.getUserById(id);
+
+      
+
+         
+
+        
+
+         const accessToken = tokenGenerator.generate({
+            id: user.getId(),
+            role: user.getRole(),
+         });
+
+         return { accessToken };
+      } catch (error) {
+         throw new CustomError(error.statusCode, error.message)
+      }
+   }
 }
 
 export default new UserBusiness()
